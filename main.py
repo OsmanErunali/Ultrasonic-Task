@@ -36,5 +36,12 @@ def navigate_robot(threshold=10):
         return "stop"
 
 
-# runs the function
-navigate_robot()
+def run_robot_navigation():
+    #this function is show the result to user
+    result = navigate_robot()
+    print("Robot should:", result)
+
+
+
+run_robot_navigation()
+print(calculate_average_distance())
