@@ -24,3 +24,17 @@ def calculate_average_distance():
     else:
         average = total / count
         return average
+
+
+def navigate_robot(threshold=10):
+    # This function could use the average distance to determine whether the robot should "Continue" or "Stop".
+    collect_sensor_data()
+    average_distance = calculate_average_distance()
+    if average_distance > threshold:
+        return "continue"
+    else:
+        return "stop"
+
+
+# runs the function
+navigate_robot()
